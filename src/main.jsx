@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
-import "./styles/app.scss";
+import "./styles/App.scss";
 import { createContext, useState } from "react";
 
 export const server = "https://todo-backend-qa3h.onrender.com/api/v1";
