@@ -1,7 +1,6 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Context } from "../main";
 import Loader from "./Loader";
-import { toast } from "react-hot-toast";
 import { Navigate } from "react-router-dom";
 
 const Profile = () => {
@@ -11,6 +10,12 @@ const Profile = () => {
     // console.log(isAuth);
 
     if (!isAuth) return <Navigate to={"/login"} />;
+
+    const name = userDetails.name;
+    const email = userDetails.email;
+    const createdAt = userDetails.createdAt;
+
+    useEffect(() => {}, [name, email, createdAt]);
 
     return loading ? (
         <Loader />
@@ -23,10 +28,10 @@ const Profile = () => {
                 <p>Created on: </p>
             </div>
             <div>
-                <h1>{userDetails?.name}</h1>
+                <h1>{name}</h1>
                 <br />
-                <p>{userDetails?.email}</p>
-                <p>{userDetails?.createdAt}</p>
+                <p>{email}</p>
+                <p>{createdAt}</p>
             </div>
         </div>
     );
