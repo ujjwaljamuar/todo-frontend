@@ -15,7 +15,7 @@ const Profile = () => {
     const email = userDetails.email;
     const createdAt = userDetails.createdAt;
 
-    useEffect(() => {}, [name, email, createdAt]);
+    useEffect(() => {}, [userDetails]);
 
     return loading ? (
         <Loader />
