@@ -3,7 +3,7 @@ import App from "./App.jsx";
 import "./styles/App.scss";
 import { createContext, useState } from "react";
 
-export const server = "https://todo-backend-qa3h.onrender.com/api/v1";
+export const server = "https://todo-backend-ujjwaljamuar.vercel.app/api/v1";
 
 export const Context = createContext({ isAuth: false });
 
